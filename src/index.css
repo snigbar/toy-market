@@ -28,6 +28,25 @@
 }
 
 
+.each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 80vh !important;
+  }
+  
+  .each-slide-effect span {
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    background: #efefef;
+    border-radius: 1rem;
+    text-align: center;
+    width: 50%;
+  }
+
+
 
 
 .slick-slide {

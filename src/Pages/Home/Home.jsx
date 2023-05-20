@@ -4,6 +4,8 @@ import ToysFrom from './ToysFrom'
 import Categories from './Categories'
 import { useLoaderData } from 'react-router-dom'
 import AOS from 'aos';
+import Gallery from './Gallery'
+import FindStore from './FindStore'
 
 const Home = () => {
   const data = useLoaderData()
@@ -17,6 +19,8 @@ const Home = () => {
     <Header></Header>
     <ToysFrom></ToysFrom>
     <Categories data={data}></Categories>
+    <Gallery></Gallery>
+    <FindStore></FindStore>
     </>
   )
 }
