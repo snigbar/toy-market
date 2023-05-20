@@ -16,5 +16,24 @@
    color: white !important;
 }
 
+.slick-arrow{
+    background-color: rgb(228, 228, 228) !important;
+    height: 2rem !important;
+    width: 2rem !important;
+    padding: .5rem !important;
+    margin: 0 5px !important;
+    border-radius: 50% !important;
+    box-shadow: #1b1b1b !important;
+   
+}
 
+
+
+
+.slick-slide {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
    

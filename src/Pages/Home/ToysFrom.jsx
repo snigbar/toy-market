@@ -19,9 +19,10 @@ const ToysFrom = () => {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
+      arrows: false,
       speed: 3000,
       autoplaySpeed: 5,
-      cssEase: "linear",
+     
       responsive: [
         {
           breakpoint: 1024,
@@ -50,13 +51,13 @@ const ToysFrom = () => {
       };
 
   return (
-    <section className='py-8 my-8'>
+    <section className='my-10 py-8'>
     <div className='w-3/5 mx-auto'>
     <h1 className='text-4xl text-center text-zinc-800 font-bold leading-[4rem]'>Unleash The Hero Within!</h1>
-    <p className='text-center my-4 text-xl tracking-[2px]'>Discover the Origins of Our Action Figure Toys</p>
+    <p className='text-center my-4 text-xl tracking-[2px] mb-6'>Discover the Origins of Our Action Figure Toys</p>
     </div>
 
-    <Slider {...settings} className='w-11/12 lg:w-4/5 mx-auto my-8'>
+    <Slider {...settings} className='w-11/12 lg:w-4/5 mx-auto mt-8 mb-0 h-32'>
     <div className='w-full text-center'>
       <img src={img1} className='w-44 h-36'/>
     </div>
