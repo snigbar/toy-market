@@ -52,34 +52,34 @@ const ToysFrom = () => {
   return (
     <section className='py-8 my-8'>
     <div className='w-3/5 mx-auto'>
-    <h1 className='text-5xl text-center text-zinc-800 font-bold leading-[4rem]'>Unleash The Hero Within!</h1>
-    <p className='text-center my-8 text-2xl tracking-[3px]'>Discover the Origins of Our Action Figure Toys</p>
+    <h1 className='text-4xl text-center text-zinc-800 font-bold leading-[4rem]'>Unleash The Hero Within!</h1>
+    <p className='text-center my-4 text-xl tracking-[2px]'>Discover the Origins of Our Action Figure Toys</p>
     </div>
 
-    <Slider {...settings} className='w-11/12 lg:w-4/5 mx-auto my-4'>
-    <div className='text-center'>
-      <img src={img1} className='w-44 h-40'/>
+    <Slider {...settings} className='w-11/12 lg:w-4/5 mx-auto my-8'>
+    <div className='w-full text-center'>
+      <img src={img1} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img2} className='w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img2} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img3} className='w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img3} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img4} className='w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img4} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img5} className='w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img5} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img6} className='w-28 lg:w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img6} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img7} className='w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img7} className='w-44 h-36'/>
     </div>
-    <div className='text-center'>
-      <img src={img8} className='w-44 h-40'/>
+    <div className='w-full text-center'>
+      <img src={img8} className='w-44 h-36'/>
     </div>
   </Slider>
   </section>

@@ -8,7 +8,7 @@ function Carousel() {
 
 
   return (
-    <div className="carousel w-[90%] lg:w-3/5 h-[65vh] rounded-3xl">
+    <div className="carousel w-[90%] lg:w-3/4 h-[70vh] rounded-3xl">
         {/* slide 1 */}
     <div id="slide1" className="carousel-item relative w-full">
       <img src={banner1} className="w-full object-cover" />
