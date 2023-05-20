@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
 import ToyCards from '../../Components/ToyCards.jsx/ToyCards';
 
 
@@ -31,49 +30,49 @@ const Categories = ({data}) => {
 
     <TabPanel>
       
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-right">
         {data.filter(data => data.category === "DC").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
         </div>
       
     </TabPanel>
     <TabPanel>
 
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-left">
         {data.filter(data => data.category === "Marvel").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
     </div>
 
     </TabPanel>
     <TabPanel>
       
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-right">
         {data.filter(data => data.category === "The Boys").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
     </div>
 
     </TabPanel>
     <TabPanel>
      
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-left">
         {data.filter(data => data.category === "The Incredibles").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
     </div>
 
     </TabPanel>
     <TabPanel>
       
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-right">
         {data.filter(data => data.category === "X-Men").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
     </div>
 
     </TabPanel>
     <TabPanel>
     
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-left">
         {data.filter(data => data.category === "Ninja Turtles").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
     </div>
 
     </TabPanel>
     <TabPanel>
      
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4' data-aos="fade-right">
         {data.filter(data => data.category === "Others").map(el => <ToyCards key={el._id} toydata={el}>{el._id}</ToyCards>)}
     </div>
 
