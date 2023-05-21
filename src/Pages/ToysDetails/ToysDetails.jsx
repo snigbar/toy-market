@@ -13,7 +13,7 @@ const ToysDetails = () => {
     <div className='flex justify-center items-center gap-6 w-full py-10'>
     <img src={picture_url} className='rounded-lg w-96 object-cover'/>
     <div className='flex flex-col justify-center gap-4 w-3/4'>
-    <h1 className='text-3xl md:text-5xl text-center md:text-left font-semibold text-zinc-800'>{toy_name}</h1>
+    <h1 className='text-3xl md:text-5xl text-center md:text-left font-semibold text-zinc-800'>{product_name}</h1>
     <p className='text-center md:text-left'><span className='font-semibold'>Seller: </span>{seller_name}</p>
     <p className='text-center md:text-left'><span className='font-semibold'>Contact Seller: </span>{seller_email}</p>
     <p className='text-center md:text-left'><span className='font-semibold'>Category: </span>{category}</p>

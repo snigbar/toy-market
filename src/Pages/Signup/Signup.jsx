@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
+
+    const [error, setError] = useState(false);
+
   
     const handleSignUp = (e) =>{
         e.preventDefault();
@@ -10,7 +13,13 @@ const Signup = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-    
+        const photo = form.photo.value;
+        
+        if(password.length < 6){
+            setError("password must be at least 6 characters")
+            return
+        }
+
         console.log(name,email,password)
         
         
@@ -19,7 +28,7 @@ const Signup = () => {
    
 
   return (
-    <div className="hero min-h-[80vh] bg-base-200">
+    <div className="hero bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
 
     <div className="text-center lg:text-left w-full md:w-1/2">
@@ -42,6 +51,15 @@ const Signup = () => {
           </label>
           <input type="email" placeholder="email" name="email" className="input input-bordered" required />
         </div>
+        
+        <div className='form-control'>
+            <label className="label">
+            <span className="label-text">Photo Url</span>
+            </label>
+            <input type="text" placeholder="Photo Url"
+            className="input input-bordered" name="photo" required />
+        </div>
+
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
@@ -51,11 +69,12 @@ const Signup = () => {
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
+        {error && <p className='bg-red-500 p-2 text-white my-2'>{error}</p>}
         <div className="form-control mt-6">
         <button className="btn btn-error text-white bg-[#FF1821] hover:bg-[#db141a] text-lg my-4" type='submit'>Sign Up</button>
         </div>
         <div className="form-control">
-        <Link to='/login' className="text-[#FF1821] hover:text-[#FF1821] text-lg my-4" type='submit'>Don't have an account? Register</Link>
+        <Link to='/login' className="text-[#FF1821] hover:text-[#FF1821] text-lg my-4" type='submit'>Already have an account? SignIn insetead</Link>
         </div>
       </div>
     </div>
