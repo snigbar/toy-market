@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import useTitle from '../../Hooks/useTitle';
 
 
 
@@ -10,6 +11,9 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate()
     const from = location.state?.from || '/';
+
+
+    useTitle("login")
 
     const handleLogin = (e) =>{
         e.preventDefault();

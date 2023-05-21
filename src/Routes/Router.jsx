@@ -8,6 +8,8 @@ import ToysDetails from "../Pages/ToysDetails/ToysDetails";
 import PrivateRoute from "./PrivateRoute.jsx";
 import MyToys from "../Pages/MyToys/MyToys";
 import AddToy from "../Pages/AddToy/AddToy";
+import Update from "../Pages/Update/Update";
+import Blog from "../Pages/Blog/Blog";
 
 
 
@@ -46,12 +48,22 @@ const router = createBrowserRouter([
             
         },
         {
+            path:"/blog",
+            element:<Blog></Blog>,
+            
+        },
+        {
             path:"/addToy",
             element:<PrivateRoute><AddToy></AddToy></PrivateRoute>,
             
         },
 
-        
+        {
+            path:"/myToys/update/:id",
+            element:<PrivateRoute><Update></Update></PrivateRoute>,
+            loader: ({params}) => fetch(`https://toy-market-server-rouge.vercel.app/${params.id}`)
+            
+        },
 
       ]
     },

@@ -3,18 +3,22 @@ import TabularData from '../../Components/TabularData/TabularData'
 import { AuthContext } from '../../Providers/AuthProviders';
 import MyToysCard from './MyToysCard';
 import swal from 'sweetalert';
+import useTitle from '../../Hooks/useTitle';
 
 
 
 const MyToys = () => {
 
-    const {user,token} = useContext(AuthContext);
+    const {user} = useContext(AuthContext);
     const [toys, setToys] = useState([])
+    const  [sort, setSort] = useState(1) 
 
-
+    useTitle("My Toys")
    
-    const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}`;
-
+    // const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}${sort?"&sort=-1":"sort=1"}`;
+    // const url = `http://localhost:5000/mytoys?email=${user?.email}${sort?"&sort=-1":"sort=1"}`;
+    const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}&sort=${sort}`;
+    
     useEffect(()=>{ 
         const fetchData =async() =>{
          
@@ -29,7 +33,7 @@ const MyToys = () => {
         fetchData()
         
   
-      },[url])
+      },[url,sort])
 
 
       const handleDelete = (id) =>{
@@ -65,6 +69,13 @@ const MyToys = () => {
 
     <div className='w-4/5 mx-auto'>
         <h1 className='text-4xl text-center text-zinc-800 font-bold leading-[4rem] my-6'>My Toys</h1>
+
+
+            
+            <button className='btn btn-secondary text-white bg-cyan-500 hover:bg-cyan-600 text-xs px-4 py-0 my-5 mx-4 border-none' onClick={()=> setSort(-1)}>descending</button>
+            <button className='btn btn-secondary text-white bg-cyan-500 hover:bg-cyan-600 text-xs px-4 py-0 my-5 border-none' onClick={()=> setSort(1)}>descending</button>
+            
+    
 
         <div className="container">
 

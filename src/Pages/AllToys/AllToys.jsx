@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import TabularData from '../../Components/TabularData/TabularData';
+import useTitle from '../../Hooks/useTitle';
 
 
 const AllToys = () => {
 
+    useTitle("All Toys")
     
     const [allData, setAllData] = useState([])
     const [displayData, setDisplayData] = useState([])

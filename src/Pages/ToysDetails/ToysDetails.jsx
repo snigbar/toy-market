@@ -1,11 +1,13 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import { FaStar, FaDollarSign,FaStore} from "react-icons/fa";
+import useTitle from '../../Hooks/useTitle';
 
 const ToysDetails = () => {
     const data = useLoaderData()
     const {_id, product_name, seller_name, seller_email, category, picture_url, price, rating, toy_name, sub_category, available_quantity,detail_description} =data;
 
+    useTitle("All Toys")
 
   return (
    

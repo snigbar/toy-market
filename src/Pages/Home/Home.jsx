@@ -6,6 +6,7 @@ import { useLoaderData } from 'react-router-dom'
 import AOS from 'aos';
 import Gallery from './Gallery'
 import FindStore from './FindStore'
+import useTitle from '../../Hooks/useTitle'
 
 const Home = () => {
   const data = useLoaderData()
@@ -13,6 +14,8 @@ const Home = () => {
   useEffect(() => {
     AOS.init();
   }, [])
+
+  useTitle("Home")
 
   return (
     <>
