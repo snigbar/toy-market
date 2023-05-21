@@ -10,7 +10,7 @@ b7a11-toy-marketplace-client-side-snigbar created by GitHub Classroom
 
 ### Server is build using express js and deployed in vercel
 
-# packages used: react leaflet,react to pdf, lazyloader, react icons,DaisyUi
+# packages used: react leaflet, react icons,DaisyUi
 
 # Home Page 
 
