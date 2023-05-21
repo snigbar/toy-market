@@ -25,7 +25,7 @@ const TabularData = ({data}) => {
      {available_quantity}
     </td>
     <td>
-    <Link to={`/`} className='w-full flex justify-center'>
+    <Link to={`/details/${_id}`} className='w-full flex justify-center'>
       <button className="btn btn-error text-white bg-[#FF1821] hover:bg-[#e4161d] border-none mx-auto text-xs rounded-full">View Details</button>
     </Link>
     </td>

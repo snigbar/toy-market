@@ -16,7 +16,7 @@ const ToyCards = ({toydata}) => {
     <p className='text-[#FF1821] text-[1rem]'>Price: ${price}</p>
     <p className='text-[#FF1821] text-[1rem]'>Rating: {rating}</p>
     </div>
-    <Link to={`/`} className='w-full flex justify-center'>
+    <Link to={`/details/${_id}`} className='w-full flex justify-center'>
       <button className="btn btn-error text-white bg-[#FF1821] hover:bg-[#e4161d] border-none mx-auto font-bold rounded-full">View Details</button>
     </Link>
   </div>

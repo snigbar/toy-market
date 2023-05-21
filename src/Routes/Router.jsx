@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home";
 import AllToys from "../Pages/AllToys/AllToys";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
+import ToysDetails from "../Pages/ToysDetails/ToysDetails";
 
 
 
@@ -29,7 +30,13 @@ const router = createBrowserRouter([
         {
             path:"/signup",
             element:<Signup></Signup>
-        }
+        },
+        {
+            path:"/details/:id",
+            element:<ToysDetails></ToysDetails>,
+            loader: ({params}) => fetch(`https://toy-market-server-rouge.vercel.app/${params.id}`)
+        },
+
       ]
     },
   ]);
