@@ -54,7 +54,7 @@ const signIn = (email, password) => {
 
 
 
-    const authInfo ={user,setUser,loading,setLoading,createUser,updateUser,signIn,logOut}
+    const authInfo ={user,setUser,loading,setLoading,createUser,updateUser,signIn,logOut,auth}
 
   return (
     <AuthContext.Provider value={authInfo}>

@@ -15,8 +15,7 @@ const MyToys = () => {
 
     useTitle("My Toys")
    
-    // const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}${sort?"&sort=-1":"sort=1"}`;
-    // const url = `http://localhost:5000/mytoys?email=${user?.email}${sort?"&sort=-1":"sort=1"}`;
+
     const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}&sort=${sort}`;
     
     useEffect(()=>{ 

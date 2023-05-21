@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../../Providers/AuthProviders';
 import { Link } from 'react-router-dom';
 import useTitle from '../../Hooks/useTitle';
+import swal from 'sweetalert';
 
 const AddToy = () => {
 
@@ -41,7 +42,11 @@ const AddToy = () => {
             },
             body: JSON.stringify(addData)
         }).then(res => res.json()).then(data => {
-            if(data.insertedId) alert("Data added")
+            if(data.insertedId) {
+                swal({
+                    text: "Data Added",
+                  });
+            }
            form.reset();
         })
         }
