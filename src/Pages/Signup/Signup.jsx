@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Signup = () => {
 
     const [error, setError] = useState(false);
-
+    const {createUser,updateUser,setUser} = useContext(AuthContext);
   
     const handleSignUp = (e) =>{
         e.preventDefault();
@@ -19,6 +20,15 @@ const Signup = () => {
             setError("password must be at least 6 characters")
             return
         }
+
+        createUser(email,password)
+        .then((res) =>{
+            // photo and name
+            updateUser(name,photo);
+            setUser(res.user);
+            form.reset();
+
+        }).catch(err => console.log(err));
 
         console.log(name,email,password)
         
