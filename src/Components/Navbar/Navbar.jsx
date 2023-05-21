@@ -19,9 +19,9 @@ const Navbar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         
-        <li><a className='active:bg-cyan-400'>Item 1</a></li>
-        <li><a className='active:bg-cyan-400'>Item 2</a></li>
-        <li><a className='active:bg-cyan-400'>Item 3</a></li>
+      <li><NavLink to='/'className='text-sm active:bg-cyan-500'>Home</NavLink></li>
+      <li><NavLink to='/alltoys'className='text-sm active:bg-cyan-500'>All Toys</NavLink></li>
+      <li><NavLink to='/blog'className='text-sm active:bg-cyan-500'>Blog</NavLink></li>
 
       </ul>
     </div>
@@ -41,7 +41,8 @@ const Navbar = () => {
   </div>
 
 <div className='space-x-4'>
-  {user?.displayName &&<div className="dropdown dropdown-end">
+  {user?.displayName 
+  && <div className="dropdown dropdown-end">
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar border-cyan-500">
      <div className="w-10 rounded-full">
           <img src={user.photoURL} title={`${user.displayName} (reload if image doesn't appear)`}/>

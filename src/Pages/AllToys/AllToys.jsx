@@ -6,30 +6,40 @@ const AllToys = () => {
 
     
     const [allData, setAllData] = useState([])
+    const [displayData, setDisplayData] = useState([])
     const [limit, setLimit] = useState(20);
-    
+ 
 
     useEffect(()=>{
 
-       const fetchData =async() =>{
+       const fetchData =async(value) =>{
        
-        const response =await fetch(`https://toy-market-server-rouge.vercel.app/allToys?limit=${limit}`)
+        const response =await fetch(`https://toy-market-server-rouge.vercel.app/allToys?limit=${value}`)
         const data = await response.json()
         setAllData(data);
 
     }
 
-    fetchData();
+    fetchData(limit);
     
 },[limit])
 
 
  const handleSearch = (e) =>{
     e.preventDefault();
-    const search = e.target.search.value.toLowerCase();
-    const searchResult = allData.filter(word => word.product_name.toLowerCase().indexOf(search) > -1);
-    setAllData(searchResult)
-    e.target.reset()
+
+
+
+        const fetchData =async() =>{
+        
+         const response =await fetch(`https://toy-market-server-rouge.vercel.app/allToys?`)
+         const data = await response.json()
+         const search = e.target.search.value.toLowerCase();
+         const searchResult = data.filter(word => word.product_name.toLowerCase().indexOf(search) > -1);
+         setDisplayData(searchResult)
+     }
+ 
+     fetchData();
 
  }
 
@@ -65,7 +75,7 @@ const AllToys = () => {
     <tbody>
       {/* row */}
     
-      {allData.map(el => <TabularData key={el._id} data={el}>{el._id}</TabularData>)}
+      {displayData.length !== 0 ? displayData.map(el => <TabularData key={el._id} data={el}>{el._id}</TabularData>): allData.map(el => <TabularData key={el._id} data={el}>{el._id}</TabularData>)}
      
     </tbody>   
   </table>
@@ -74,7 +84,7 @@ const AllToys = () => {
  </div>
 
     <div className="w-full flex justify-center my-8">
-        <button className='btn btn-error text-white bg-cyan-500 hover:bg-cyan-700 border-none' onClick={()=>{setLimit(limit == 20? 0:20)}}>{limit == 20?"show All":"show Less"}</button>
+        <button className='btn btn-error text-white bg-cyan-500 hover:bg-cyan-700 border-none' onClick={()=>{{setLimit(limit == 20? 0:20)};setDisplayData([])}}>{limit == 20?"show All":"show Less"}</button>
     </div>
     </div>
     </section>
