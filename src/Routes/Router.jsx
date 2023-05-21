@@ -9,7 +9,9 @@ import PrivateRoute from "./PrivateRoute.jsx";
 import MyToys from "../Pages/MyToys/MyToys";
 import AddToy from "../Pages/AddToy/AddToy";
 import Update from "../Pages/Update/Update";
+
 import Blog from "../Pages/Blog/Blog";
+import Error from "../Pages/Error";
 
 
 
@@ -19,6 +21,7 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <Error></Error>,
       children:[
         {
             path:"/",

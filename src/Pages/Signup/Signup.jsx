@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import useTitle from '../../Hooks/useTitle';
 
 const Signup = () => {
 
     const [error, setError] = useState(false);
     const {createUser,updateUser,setUser} = useContext(AuthContext);
-  
+    useTitle("All Toys")
     const handleSignUp = (e) =>{
         e.preventDefault();
 
