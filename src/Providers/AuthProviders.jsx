@@ -47,9 +47,14 @@ const signIn = (email, password) => {
     },[])
 
 
+    const logOut = () =>{
+        setLoading(true)
+        return signOut(auth);
+    }
 
 
-    const authInfo ={user,setUser,loading,setLoading,createUser,updateUser,signIn }
+
+    const authInfo ={user,setUser,loading,setLoading,createUser,updateUser,signIn,logOut}
 
   return (
     <AuthContext.Provider value={authInfo}>
