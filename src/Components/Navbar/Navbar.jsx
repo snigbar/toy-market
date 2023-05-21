@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/littols.png'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -21,16 +22,16 @@ const Navbar = () => {
     </div>
     {/* logo */}
     <a href='/' className="normal-case text-3xl">
-    <img src={logo} className='w-52'/>
+    <img src={logo} className='w-44'/>
     </a>
   </div>
 
   {/* center links */}
-  <div className="text-xl navbar-center hidden lg:flex gap-2">
-    <ul className="menu menu-horizontal px-1">
-      <li><a className='active:bg-cyan-400'>Item 1</a></li>
-      <li><a className='active:bg-cyan-400'>Item 2</a></li>
-      <li><a className='active:bg-cyan-400'>Item 3</a></li>
+  <div className="navbar-center hidden lg:flex gap-2">
+    <ul className="menu menu-horizontal px-1 gap-4">
+      <li><NavLink to='/'className='text-sm active:bg-cyan-500'>Home</NavLink></li>
+      <li><NavLink to='/alltoys'className='text-sm active:bg-cyan-500'>All Toys</NavLink></li>
+      <li><NavLink to='/blog'className='text-sm active:bg-cyan-500'>Blog</NavLink></li>
     </ul>
   </div>
 

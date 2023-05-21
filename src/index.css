@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.active{
+    background-color: #00D8E0;
+}
+
 .react-tabs__tab{
     color: #1b1b1b;
 }
