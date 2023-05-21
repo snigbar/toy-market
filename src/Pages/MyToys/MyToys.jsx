@@ -12,8 +12,8 @@ const MyToys = () => {
     const [toys, setToys] = useState([])
 
 
-    const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=contact@toystore.com`;
-    // const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}`;
+   
+    const url = `https://toy-market-server-rouge.vercel.app/mytoys?email=${user?.email}`;
 
     useEffect(()=>{ 
         const fetchData =async() =>{
