@@ -22,7 +22,10 @@ const Navbar = () => {
       <li><NavLink to='/'className='text-sm active:bg-cyan-500'>Home</NavLink></li>
       <li><NavLink to='/alltoys'className='text-sm active:bg-cyan-500'>All Toys</NavLink></li>
       <li><NavLink to='/blog'className='text-sm active:bg-cyan-500'>Blog</NavLink></li>
-
+    {
+      user &&   <><li><NavLink to='/mytoys'className='text-sm active:bg-cyan-500'>My Toys</NavLink></li>
+      <li><NavLink to='/addToy'className='text-sm active:bg-cyan-500'>Add Toy</NavLink></li></>
+    }
       </ul>
     </div>
     {/* logo */}
@@ -37,6 +40,10 @@ const Navbar = () => {
       <li><NavLink to='/'className='text-sm active:bg-cyan-500'>Home</NavLink></li>
       <li><NavLink to='/alltoys'className='text-sm active:bg-cyan-500'>All Toys</NavLink></li>
       <li><NavLink to='/blog'className='text-sm active:bg-cyan-500'>Blog</NavLink></li>
+      {
+      user &&   <><li><NavLink to='/mytoys'className='text-sm active:bg-cyan-500'>My Toys</NavLink></li>
+      <li><NavLink to='/addToy'className='text-sm active:bg-cyan-500'>Add Toy</NavLink></li></>
+    }
     </ul>
   </div>
 

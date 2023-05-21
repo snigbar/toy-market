@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import ToysDetails from "../Pages/ToysDetails/ToysDetails";
 import PrivateRoute from "./PrivateRoute.jsx";
+import MyToys from "../Pages/MyToys/MyToys";
 
 
 
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
             path:"/details/:id",
             element:<PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
             loader: ({params}) => fetch(`https://toy-market-server-rouge.vercel.app/${params.id}`)
+        },
+        {
+            path:"/mytoys",
+            element:<PrivateRoute><MyToys></MyToys></PrivateRoute>,
+            
         },
 
       ]
