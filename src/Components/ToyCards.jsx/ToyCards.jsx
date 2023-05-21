@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ToyCards = ({toydata}) => {
-    console.log(toydata)
+ 
     const {_id,picture_url,price, product_name,rating,category} =toydata;
   return (
  <div>

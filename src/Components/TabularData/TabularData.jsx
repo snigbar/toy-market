@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const TabularData = ({data}) => {
 
     const {seller_name,product_name,category,price,available_quantity,_id} = data;
-    console.log(data)
+   
   return (
     <tr>
     <td>
