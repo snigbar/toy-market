@@ -1,7 +1,8 @@
 # b7a11-toy-marketplace-client-side-snigbar
 b7a11-toy-marketplace-client-side-snigbar created by GitHub Classroom
 
-# Sapore
+# Toy Market
+
 
 # Live link: ([https://toy-store-b6b93.web.app/)](https://toy-store-b6b93.web.app/))
 
