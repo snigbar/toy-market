@@ -9,6 +9,7 @@ b7a11-toy-marketplace-client-side-snigbar created by GitHub Classroom
 ## This project is created using Tailwind Css and React and DaisyUI Mongodb and express
 
 ### Server is build using express js and deployed in vercel
+## server side repo: https://github.com/snigbar/toy-market-server
 
 # packages used: react leaflet, react icons,DaisyUi
 
